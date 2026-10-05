@@ -185,17 +185,23 @@ The datasets were categorized into classes based on the type of sound, object, a
 ```
                 ┌─────────────────────┐
   Camera ─────► │ YOLO Object Detect  │──► objects ──┐
-     │          └─────────────────────┘              │
+     │          └─────────────────────┘              |
+     |                                               |
+     |                                               |
+     |          ┌──────────────┐                     │
+     └────────► │ YAMNet audio │──► audio Class ──── │
+     |          └──────────┬───┘                     |
+     |                     |                         |
      │          ┌─────────────────────┐              │
      └────────► │ YOLO-Pose (keypoints)│             │
                 └──────────┬──────────┘              ▼
                            ▼                   ┌──────────┐     ┌──────────┐
-                  Sequence buffer (T frames)   │  Fusion  │────►│ Web API  │
+                   17 keypoints (30,2,17)      │  Fusion  │────►│ Web API  │
                            ▼                   │  Logic   │     │ / Socket │
                     ┌────────────┐             └──────────┘     └────┬─────┘
                     │    GRU     │──► action ───────▲                ▼
-                    └────────────┘                  │           Web Dashboard
-  Mic ────► YAMNet ──► audio event ─────────────────┘
+                    └────────────┘                             Web Dashboard
+     
 ```
 ### 9.การทำงาน
 - **Object Detection**  
@@ -225,7 +231,7 @@ Arise/
 ├── backend/                            # โค้ดการทำงานของเเต่ละตัว เเละโค้ดการเทรนที่ใช้
 │   ├── audio_classifier/
 |   |   ├── audio_classifier.py
-|   |   └── train/
+|   |   └── train/                      # โฟลเดอร์สั่งเทรนเเละทดลองใช้เเบบทดสอบ
 │   ├── object_detector/
 |   |   ├── object_detector.py
 |   |   └── train/
@@ -366,7 +372,7 @@ pip install scikit-learn
 ```
 
 
-## วิธีใช้งาน
+# วิธีใช้งาน
 
 ```bash
 # รันไฟล์หลัก
