@@ -170,6 +170,7 @@ The datasets were categorized into classes based on the type of sound, object, a
 | v1.0    | Initial version with detection errors                |
 | v2.0    | Added more handgun images                            |
 | v3.0    | Added Knife, Phone, Water Bottle, and Person classes |
+| v4.0    | Set Split                                            |
 
 ### Video Classes
 
