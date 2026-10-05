@@ -1,0 +1,22 @@
+{
+    "training_id": "20261005_012024",
+    "dataset_path": "data/sound",
+    "sample_rate": 16000,
+    "minimum_samples_per_class": 10,
+    "total_classes_found": 3,
+    "classes_used": 3,
+    "classes_removed": 0,
+    "total_valid_audio_files": 5851,
+    "total_removed_audio_files": 0,
+    "class_counts": {
+        "gunshot": 851,
+        "normal": 4000,
+        "screaming": 1000
+    },
+    "valid_classes": [
+        "gunshot",
+        "normal",
+        "screaming"
+    ],
+    "removed_classes": {}
+}
