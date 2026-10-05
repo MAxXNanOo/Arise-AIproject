@@ -23,7 +23,7 @@ This project uses three datasets to train and evaluate the AI model:
 
 2. **Image:** Contains images of weapons and normal objects to detect weapons during an event.
 
-   * *Number of images:* 16,637
+   * *Number of images:* 5,000
    * *Number of classes:* 5
    * *Image format:* JPG, PNG
    * *Image size:* 640 × 640 pixels
@@ -140,8 +140,8 @@ The datasets were categorized into classes based on the type of sound, object, a
 2. **Image Classes**
    | Subset     | Percentage |
    | ---------- | ---------: |
-   | Training   |        60% |
-   | Validation |        30% |
+   | Training   |        70% |
+   | Validation |        20% |
    | Testing    |        10% |
 
 3. **Video Classes**
